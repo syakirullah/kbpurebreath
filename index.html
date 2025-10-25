@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KB Pure Breath — Live — Kampung Baru, KL</title>
+  <meta name="description" content="KB Pure Breath - Live Air Quality monitoring — Kampung Baru, Kuala Lumpur (PM2.5, PM10 + estimated AQI)" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="glass head">
+      <div class="title">
+        <h1>KB Pure Breath</h1>
+        <p>Live Air Quality — Kampung Baru, Kuala Lumpur</p>
+      </div>
+      <div class="controls">
+        <button id="refreshBtn" class="btn">Refresh Now</button>
+        <div class="meta">Last updated: <span id="lastUpdated">--</span></div>
+      </div>
+    </header>
+
+    <section class="cards">
+      <div class="card big glass">
+        <div class="label">AQI (est.)</div>
+        <div id="aqiValue" class="bigval">--</div>
+        <div id="aqiCategory" class="category">—</div>
+        <div id="aqiInfo" class="muted">PM2.5 / PM10 • µg/m³</div>
+      </div>
+
+      <div class="card glass">
+        <div class="label">PM2.5</div>
+        <div id="pm25" class="val">--</div>
+        <div class="muted">µg/m³</div>
+      </div>
+
+      <div class="card glass">
+        <div class="label">PM10</div>
+        <div id="pm10" class="val">--</div>
+        <div class="muted">µg/m³</div>
+      </div>
+    </section>
+
+    <section class="chart glass">
+      <h2>Particulate Trend (recent readings)</h2>
+      <canvas id="pmChart" aria-label="PM trend chart" role="img"></canvas>
+      <div class="note muted">Auto refresh every 5 minutes • Manual refresh available</div>
+    </section>
+
+    <footer class="glass footer">
+      <div>Data source: OpenAQ (proxied) • Estimated AQI calculated from PM values</div>
+      <div>© 2025 KB Pure Breath</div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

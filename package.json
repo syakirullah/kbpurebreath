@@ -1,0 +1,11 @@
+{
+  "name": "kbpurebreath",
+  "version": "1.0.0",
+  "description": "KB Pure Breath — Live AQI (Kampung Baru, KL)",
+  "main": "index.html",
+  "scripts": {
+    "start": "vercel dev"
+  },
+  "author": "Syakir",
+  "license": "MIT"
+}
